@@ -1,4 +1,5 @@
-import { darkColor as DARK_THEME } from "../dark/colors";
+import { ButtonDarkTheme } from './themeVariable';
 
+const DARK_THEME = ButtonDarkTheme;
 
-export default DARK_THEME
+export default DARK_THEME;

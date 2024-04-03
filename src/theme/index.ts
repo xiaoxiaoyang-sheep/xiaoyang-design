@@ -19,3 +19,5 @@ export const changeTheme = (type: theme) => {
     .join(';');
   document.documentElement.setAttribute('style', vars);
 };
+
+export { ButtonThemeProps } from './themes/themeTypes';

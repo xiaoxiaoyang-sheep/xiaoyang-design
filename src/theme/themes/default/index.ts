@@ -1,3 +1,5 @@
-import { defaultColor as DEFAULT_THEME } from "./colors"
+import { ButtonDefaultTheme } from './themeVariable';
 
-export default DEFAULT_THEME
+const DEFAULT_THEME = ButtonDefaultTheme;
+
+export default DEFAULT_THEME;

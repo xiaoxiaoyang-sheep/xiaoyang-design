@@ -1,0 +1,19 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
+import {{componentName}} from '..';
+
+describe('{{componentName}}', () => {
+  test('render {{componentName}}', () => {
+    render(<{{componentName}}>TEXT</{{componentName}}>);
+    const linkElement = screen.getByText(/TEXT/i);
+    expect(linkElement).toBeInTheDocument();
+  });
+
+  test('should support click', () => {
+    const onClick = jest.fn()
+    render(<{{componentName}} onClick={onClick}>text</{{componentName}}>);
+    const linkElement = screen.getByText(/text/i)
+    fireEvent.click(linkElement)
+    expect(onClick).toHaveBeenCalled()
+  })
+});
