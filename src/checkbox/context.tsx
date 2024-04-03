@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 export interface XYCheckboxContextProps {
   value?: Array<string>;
-  onChange: () => void;
+  onChange: (e: any) => void;
   disabled?: boolean;
 }
 
