@@ -26,7 +26,7 @@
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run build",
     "start": "npm run dev",
-    "test": "npx jest"
+    "test": "jest"
   },
   "commitlint": {
     "extends": [
@@ -53,7 +53,8 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.6",
     "antd": "^5.15.4",
-    "classnames": "^2.5.1"
+    "classnames": "^2.5.1",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

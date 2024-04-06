@@ -36,6 +36,7 @@ export type { XYSpaceElement, XYSpaceProps } from './space';
 
 // export  Component
 export { default as Foo } from './Foo';
+export { Avatar } from './avatar';
 export { Button } from './button';
 export { Checkbox } from './checkbox';
 export { Col, Row } from './grid';

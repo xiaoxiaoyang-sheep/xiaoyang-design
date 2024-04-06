@@ -65,6 +65,16 @@ const getMenus = (opts: {
           },
         ],
       },
+      {
+        title: 'Datadisplay',
+        'title_zh-CN': '数据展示',
+        children: [
+          {
+            title: 'Avatar 头像',
+            link: '/components/avatar',
+          },
+        ],
+      },
     ],
   };
   return (menus[opts.base] as [])?.map((menu: any) => {

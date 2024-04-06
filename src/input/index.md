@@ -92,17 +92,28 @@ export default () => {
 autoSize 属性适用于 textarea 节点，并且只有高度会自动变化。另外 autoSize 可以设定为一个对象，指定最小行数和最大行数。
 
 ```jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { UserOutlined } from '@ant-design/icons';
 import { TextArea, Space } from 'xiaoyang-design';
 
 export default () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   return (
     <Space>
       <TextArea placeholder="Autosize height based on content lines" autoSize />
       <TextArea
         placeholder="Autosize height with minimum and maximum number of lines"
         autoSize={{ minRows: 2, maxRows: 6 }}
+      />
+      <TextArea
+        value={value}
+        onChange={handleChange}
+        placeholder="Controlled autosize"
+        autoSize={{ minRows: 3, maxRows: 5 }}
       />
     </Space>
   );

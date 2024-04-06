@@ -1,0 +1,107 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+.xy-avatar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background: #ccc;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+}
+.xy-avatar-image {
+  background: transparent;
+}
+.xy-avatar .xy-image-img {
+  display: block;
+}
+.xy-avatar-string {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 center;
+}
+.xy-avatar.xy-avatar-icon {
+  font-size: 18px;
+}
+.xy-avatar.xy-avatar-icon > .anticon {
+  margin: 0;
+}
+.xy-avatar-lg {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.xy-avatar-lg-string {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 center;
+}
+.xy-avatar-lg.xy-avatar-icon {
+  font-size: 24px;
+}
+.xy-avatar-lg.xy-avatar-icon > .anticon {
+  margin: 0;
+}
+.xy-avatar-sm {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+}
+.xy-avatar-sm-string {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 center;
+}
+.xy-avatar-sm.xy-avatar-icon {
+  font-size: 14px;
+}
+.xy-avatar-sm.xy-avatar-icon > .anticon {
+  margin: 0;
+}
+.xy-avatar-square {
+  border-radius: 2px;
+}
+.xy-avatar > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.xy-avatar-group {
+  display: inline-flex;
+}
+.xy-avatar-group .xy-avatar {
+  border: 1px solid #fff;
+}
+.xy-avatar-group .xy-avatar:not(:first-child) {
+  margin-left: -8px;
+}
+.xy-avatar-group-popover .xy-avatar + .xy-avatar {
+  margin-left: 3px;
+}
+.xy-avatar-group-rtl .xy-avatar:not(:first-child) {
+  margin-right: -8px;
+  margin-left: 0;
+}
+.xy-avatar-group-popover.xy-popover-rtl .xy-avatar + .xy-avatar {
+  margin-right: 3px;
+  margin-left: 0;
+}
