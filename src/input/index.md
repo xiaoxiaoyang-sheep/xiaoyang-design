@@ -66,13 +66,58 @@ export default () => {
 
 <br/>
 
+### 文本域
+
+用于多行输入。
+
+```jsx
+import React from 'react';
+import { UserOutlined } from '@ant-design/icons';
+import { TextArea, Space } from 'xiaoyang-design';
+
+export default () => {
+  return (
+    <Space>
+      <TextArea />
+      <TextArea placeholder="maxLength is 6" maxLength={6} />
+    </Space>
+  );
+};
+```
+
+<br/>
+
+### 适应文本高度的文本域
+
+autoSize 属性适用于 textarea 节点，并且只有高度会自动变化。另外 autoSize 可以设定为一个对象，指定最小行数和最大行数。
+
+```jsx
+import React from 'react';
+import { UserOutlined } from '@ant-design/icons';
+import { TextArea, Space } from 'xiaoyang-design';
+
+export default () => {
+  return (
+    <Space>
+      <TextArea placeholder="Autosize height based on content lines" autoSize />
+      <TextArea
+        placeholder="Autosize height with minimum and maximum number of lines"
+        autoSize={{ minRows: 2, maxRows: 6 }}
+      />
+    </Space>
+  );
+};
+```
+
+<br/>
+
 ### 带字数提示
 
 展示字数提示。
 
 ```jsx
 import React, { useState } from 'react';
-import { Input, Space } from 'xiaoyang-design';
+import { Input, Space, TextArea } from 'xiaoyang-design';
 
 export default () => {
   const [value, setValue] = useState('controlled');
@@ -84,6 +129,12 @@ export default () => {
   return (
     <Space>
       <Input maxLength={20} />
+      <TextArea
+        maxLength={100}
+        onChange={handleChange}
+        showCount
+        placeholder="can resize"
+      />
     </Space>
   );
 };

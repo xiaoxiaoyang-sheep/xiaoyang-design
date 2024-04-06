@@ -20,7 +20,12 @@ export type {
   XYIconElement,
   XYIconProps,
 } from './icon';
-export type { XYInputElement, XYInputProps } from './input';
+export type {
+  XYInputElement,
+  XYInputProps,
+  XYTextAreaElement,
+  XYTextAreaProps,
+} from './input';
 export type {
   XYRadioElement,
   XYRadioGroupElement,
@@ -35,7 +40,7 @@ export { Button } from './button';
 export { Checkbox } from './checkbox';
 export { Col, Row } from './grid';
 export { Icon } from './icon';
-export { Input } from './input';
+export { Input, TextArea } from './input';
 export { Radio } from './radio';
 export { Space } from './space';
 export { Tag } from './tag';
