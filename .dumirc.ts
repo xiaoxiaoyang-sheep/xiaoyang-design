@@ -63,6 +63,10 @@ const getMenus = (opts: {
             title: 'Input 输入框',
             link: '/components/input',
           },
+          {
+            title: 'Switch 开关',
+            link: '/components/switch',
+          },
         ],
       },
       {

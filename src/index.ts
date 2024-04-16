@@ -33,6 +33,7 @@ export type {
   XYRadioProps,
 } from './radio';
 export type { XYSpaceElement, XYSpaceProps } from './space';
+export type { XYSwitchElement, XYSwitchProps } from './switch';
 
 // export  Component
 export { default as Foo } from './Foo';
@@ -44,6 +45,7 @@ export { Icon } from './icon';
 export { Input, TextArea } from './input';
 export { Radio } from './radio';
 export { Space } from './space';
+export { Switch } from './switch';
 export { Tag } from './tag';
 
 // export IconType
