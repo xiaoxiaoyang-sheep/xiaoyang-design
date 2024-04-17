@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, { ReactNode, useCallback, useRef, type FC } from 'react';
+import React, {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  type FC,
+} from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import './index.less';
@@ -60,6 +66,13 @@ const Affix: XYAffixElement = (props) => {
   const fixedRef = useRef<HTMLDivElement>(null);
   const fakeRef = useRef<HTMLDivElement>(null);
   const affix = useRef<boolean>(false);
+  const updateFn = useRef<any>(null);
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('scroll', updateFn.current, false);
+    };
+  }, []);
 
   const cls = classNames({
     'xy-affix': true,
@@ -70,7 +83,7 @@ const Affix: XYAffixElement = (props) => {
     (node: HTMLDivElement) => {
       if (!node) return;
 
-      function updatePosition() {
+      updateFn.current = function () {
         const { top, width, height, bottom } = node.getBoundingClientRect();
         const clientHeight = window.innerHeight;
 
@@ -112,11 +125,11 @@ const Affix: XYAffixElement = (props) => {
             onChange?.(false);
           }
         }
-      }
+      };
 
-      window.addEventListener('scroll', updatePosition, false);
+      window.addEventListener('scroll', updateFn.current, false);
 
-      const ob = new ResizeObserver(updatePosition);
+      const ob = new ResizeObserver(updateFn.current);
       ob.observe(node);
     },
     [offsetTop, offsetBottom],
