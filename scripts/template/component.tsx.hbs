@@ -35,6 +35,7 @@ const {{componentName}}: XY{{componentName}}Element = (props) => {
   const { className, children, style, onClick, ...others } = props;
 
   const cls = classNames({
+    'xy-{{dirName}}': true,
     [className as string]: !!className,
   });
   return (

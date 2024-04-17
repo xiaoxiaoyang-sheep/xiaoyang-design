@@ -79,6 +79,16 @@ const getMenus = (opts: {
           },
         ],
       },
+      {
+        title: 'Other',
+        'title_zh-CN': '其他',
+        children: [
+          {
+            title: 'Affix 图钉',
+            link: '/components/affix',
+          },
+        ],
+      },
     ],
   };
   return (menus[opts.base] as [])?.map((menu: any) => {

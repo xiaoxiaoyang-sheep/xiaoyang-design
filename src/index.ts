@@ -1,6 +1,7 @@
 import { changeTheme } from './theme';
 
 // export ComponentType
+export type { XYAffixElement, XYAffixProps } from './affix';
 export type { XYButtonElement, XYButtonProps } from './button';
 export type {
   XYCheckboxElement,
@@ -37,6 +38,7 @@ export type { XYSwitchElement, XYSwitchProps } from './switch';
 
 // export  Component
 export { default as Foo } from './Foo';
+export { Affix } from './affix';
 export { Avatar } from './avatar';
 export { Button } from './button';
 export { Checkbox } from './checkbox';
