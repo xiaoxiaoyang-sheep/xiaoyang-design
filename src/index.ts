@@ -27,6 +27,7 @@ export type {
   XYTextAreaElement,
   XYTextAreaProps,
 } from './input';
+export type { XYProgressElement, XYProgressProps } from './progress';
 export type {
   XYRadioElement,
   XYRadioGroupElement,
@@ -45,6 +46,7 @@ export { Checkbox } from './checkbox';
 export { Col, Row } from './grid';
 export { Icon } from './icon';
 export { Input, TextArea } from './input';
+export { Progress } from './progress';
 export { Radio } from './radio';
 export { Space } from './space';
 export { Switch } from './switch';

@@ -64,6 +64,12 @@ export interface XYButtonProps {
    */
   endIcon?: XYIconElement;
   /**
+   * @description 设置按钮icon样式
+   * @default null
+   * @type XYIconElement
+   */
+  icon?: XYIconElement;
+  /**
    * @description 设置按钮点击事件
    * @default null
    */
@@ -88,6 +94,7 @@ const Button: XYButtonElement = (props) => {
     disableElevation = false,
     startIcon,
     endIcon,
+    icon,
     children,
     style,
     onClick,
@@ -115,6 +122,7 @@ const Button: XYButtonElement = (props) => {
 
   const StartICon = startIcon as XYIconElement;
   const EndIcon = endIcon as XYIconElement;
+  const Icon = icon as XYIconElement;
 
   const iconSize = () => {
     switch (size) {
@@ -144,21 +152,22 @@ const Button: XYButtonElement = (props) => {
       onBlur={onBlur}
       {...others}
     >
-      {startIcon && (
+      {startIcon && !icon && (
         <StartICon
           className="left-icon"
           size={iconSize()}
           style={{ fill: iconColor() }}
         />
       )}
-      <span className="text">{children}</span>
-      {endIcon && (
+      {!icon && <span className="text">{children}</span>}
+      {endIcon && !icon && (
         <EndIcon
           className="right-icon"
           size={iconSize()}
           style={{ fill: iconColor() }}
         />
       )}
+      {icon && <Icon />}
     </button>
   );
 };

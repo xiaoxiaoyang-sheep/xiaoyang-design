@@ -1,0 +1,33 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+.xy-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.xy-progress-background {
+  background: #0000000a;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.xy-progress-active {
+  border-radius: 100px;
+  height: 8px;
+  background: rgb(22, 119, 255);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.xy-progress-exception {
+  background: rgb(255, 77, 79);
+}
+
+.xy-progress-circle {
+  width: 200px;
+  height: 200px;
+  border: 20px solid #f5f5f5;
+  border-radius: 100%;
+}

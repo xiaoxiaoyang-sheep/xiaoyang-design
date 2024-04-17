@@ -80,6 +80,16 @@ const getMenus = (opts: {
         ],
       },
       {
+        title: 'Feedback',
+        'title_zh-CN': '反馈',
+        children: [
+          {
+            title: 'Progress 进度条',
+            link: '/components/progress',
+          },
+        ],
+      },
+      {
         title: 'Other',
         'title_zh-CN': '其他',
         children: [
