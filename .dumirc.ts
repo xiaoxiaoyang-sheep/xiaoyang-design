@@ -38,6 +38,16 @@ const getMenus = (opts: {
         ],
       },
       {
+        title: 'Navigation',
+        'title_zh-CN': '导航',
+        children: [
+          {
+            title: 'Menu 菜单',
+            link: '/components/menu',
+          },
+        ],
+      },
+      {
         title: 'Layout',
         'title_zh-CN': '布局',
         children: [

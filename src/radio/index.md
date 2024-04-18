@@ -38,7 +38,7 @@ export default () => <Radio disabled>Disabled Radio</Radio>;
 
 ```jsx
 import React from 'react';
-import { Radio, RadioGroup, Space } from 'xiaoyang-design';
+import { Radio, Space } from 'xiaoyang-design';
 
 export default () => {
   return (

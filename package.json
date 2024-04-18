@@ -54,6 +54,7 @@
     "@ant-design/icons": "^5.3.6",
     "antd": "^5.15.4",
     "classnames": "^2.5.1",
+    "react-transition-group": "^4.4.5",
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
@@ -64,6 +65,7 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-transition-group": "^4.4.10",
     "@umijs/lint": "^4.0.0",
     "dumi": "^2.2.13",
     "eslint": "^8.23.0",
