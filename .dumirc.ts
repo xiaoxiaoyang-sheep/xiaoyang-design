@@ -87,6 +87,10 @@ const getMenus = (opts: {
             title: 'Avatar 头像',
             link: '/components/avatar',
           },
+          {
+            title: 'Popup 气泡卡片',
+            link: '/components/popup',
+          },
         ],
       },
       {
@@ -106,6 +110,10 @@ const getMenus = (opts: {
           {
             title: 'Affix 图钉',
             link: '/components/affix',
+          },
+          {
+            title: 'Overlay 弹出层',
+            link: '/components/overlay',
           },
         ],
       },

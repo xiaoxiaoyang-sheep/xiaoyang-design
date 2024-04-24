@@ -35,6 +35,12 @@ export type {
   XYSubmenuElement,
   XYSubmenuProps,
 } from './menu';
+export type {
+  XYOverlayElement,
+  XYOverlayProps,
+  XYPopuoProps,
+  XYPopupElement,
+} from './overlay';
 export type { XYProgressElement, XYProgressProps } from './progress';
 export type {
   XYRadioElement,
@@ -55,6 +61,7 @@ export { Col, Row } from './grid';
 export { Icon } from './icon';
 export { Input, TextArea } from './input';
 export { Menu } from './menu';
+export { Overlay, Popup } from './overlay';
 export { Progress } from './progress';
 export { Radio } from './radio';
 export { Space } from './space';

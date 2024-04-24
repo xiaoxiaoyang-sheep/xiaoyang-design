@@ -83,7 +83,10 @@ export interface XYButtonProps {
 
 export type XYButtonElement = FC<XYButtonProps>;
 
-const Button: XYButtonElement = (props) => {
+const Button: XYButtonElement = React.forwardRef<
+  HTMLButtonElement,
+  XYButtonProps
+>((props, ref) => {
   const {
     className,
     variant = 'text',
@@ -148,6 +151,7 @@ const Button: XYButtonElement = (props) => {
     <button
       className={cls}
       style={style}
+      ref={ref}
       onClick={href ? clickHrefHandle : onClick}
       onBlur={onBlur}
       {...others}
@@ -170,6 +174,6 @@ const Button: XYButtonElement = (props) => {
       {icon && <Icon />}
     </button>
   );
-};
+});
 
 export default Button;
