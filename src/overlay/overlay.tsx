@@ -38,6 +38,11 @@ export interface XYOverlayProps {
    */
   visable?: boolean;
   /**
+   * @description 设置弹出层位置回调
+   * @default false
+   */
+  onBeforePosition?: (e: any, a: any) => any;
+  /**
    * @description 设置弹出层位置
    * @default false
    * @type PlacementType
@@ -72,6 +77,7 @@ const Overlay: XYOverlayElement = (props) => {
     placement,
     visable: pvisable,
     onVisableChange,
+    onBeforePosition,
     onClick,
     ...others
   } = props;
@@ -123,13 +129,13 @@ const Overlay: XYOverlayElement = (props) => {
   const overlayCallback = useCallback(
     (node: any) => {
       overlayRef.current = node;
-
       if (node && target) {
         const targetElement = typeof target === 'function' ? target() : target;
         const positionStyle = getPlacement({
           target: targetElement,
           overlay: overlayRef.current!,
           placement: placement,
+          onBeforePosition: onBeforePosition,
         });
         setPositionStyle(positionStyle);
       }

@@ -17,6 +17,11 @@ export interface XYPopuoProps extends Omit<XYOverlayProps, 'children'> {
    */
   trigger: ReactElement;
   /**
+   * @description 设置popup触发器
+   * @default click
+   */
+  triggerType?: 'hover' | 'click';
+  /**
    * @description 设置内部节点
    * @default null
    */
@@ -26,20 +31,26 @@ export interface XYPopuoProps extends Omit<XYOverlayProps, 'children'> {
 export type XYPopupElement = FC<XYPopuoProps>;
 
 const Popup: XYPopupElement = (props) => {
-  const { children, trigger, ...others } = props;
+  const { children, trigger, triggerType = 'click', ...others } = props;
 
   const [visible, setVisible] = useState(false);
 
   const triggerRef = useRef<HTMLElement>(null);
 
-  const triggerPorops = {
+  const triggerPorops: any = {
     ref: triggerRef,
-    onClick: () => {
-      setVisible(true);
-    },
   };
+  if (triggerType === 'hover') {
+    triggerPorops.onMouseEnter = () => setVisible(true);
+    triggerPorops.onMouseOut = () => setVisible(false);
+  } else {
+    triggerPorops.onClick = () => setVisible(true);
+  }
 
-  const triggerNode = cloneElement(trigger, triggerPorops);
+  const triggerEle =
+    typeof trigger === 'string' ? <span>{trigger}</span> : trigger;
+
+  const triggerNode = cloneElement(triggerEle, triggerPorops);
 
   const handleVisibleChange = (v: boolean) => {
     setVisible(v);

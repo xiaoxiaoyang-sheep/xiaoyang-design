@@ -50,6 +50,7 @@ export type {
 } from './radio';
 export type { XYSpaceElement, XYSpaceProps } from './space';
 export type { XYSwitchElement, XYSwitchProps } from './switch';
+export type { XYTooltipElement, XYTooltipProps } from './tooltip';
 
 // export  Component
 export { default as Foo } from './Foo';
@@ -67,8 +68,11 @@ export { Radio } from './radio';
 export { Space } from './space';
 export { Switch } from './switch';
 export { Tag } from './tag';
+export { Tooltip } from './tooltip';
 
 // export IconType
+
+export type { PlacementType } from './overlay';
 
 // export Icon
 export {

@@ -14,5 +14,6 @@ interface XYOverlayElement extends InternalXYOverlayElement {
 const Overlay = InternalOverlay as XYOverlayElement;
 Overlay.Popup = Popup;
 
+export type { PlacementType } from './placement';
 export { Overlay, Popup };
 export type { XYOverlayElement, XYOverlayProps, XYPopuoProps, XYPopupElement };

@@ -91,6 +91,10 @@ const getMenus = (opts: {
             title: 'Popup 气泡卡片',
             link: '/components/popup',
           },
+          {
+            title: 'Tooltip 文字提示',
+            link: '/components/tooltip',
+          },
         ],
       },
       {

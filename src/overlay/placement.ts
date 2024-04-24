@@ -3,6 +3,7 @@ interface PlacementConfig {
   overlay: HTMLElement;
   placement?: keyof typeof placementMap;
   points?: [Point, Point];
+  onBeforePosition?: (e: any, e2: any) => any;
 }
 
 type Point = 'tl' | 'tc' | 'tr' | 'cl' | 'cc' | 'cr' | 'bl' | 'bc' | 'br';
@@ -43,6 +44,7 @@ export const getPlacement = ({
   overlay,
   placement,
   points: opoints = ['tl', 'bl'],
+  onBeforePosition,
 }: PlacementConfig) => {
   const {
     top: ttop,
@@ -113,9 +115,20 @@ export const getPlacement = ({
       break;
   }
 
-  return {
+  let result = {
     position: 'absolute',
     top,
     left,
   };
+
+  if (typeof onBeforePosition === 'function') {
+    result = onBeforePosition(result, {
+      target: {
+        width: twidth,
+        height: theight,
+      },
+    });
+  }
+
+  return result;
 };
