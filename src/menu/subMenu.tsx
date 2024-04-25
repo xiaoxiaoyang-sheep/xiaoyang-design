@@ -87,7 +87,9 @@ const Submenu: XYSubmenuElement = (props) => {
   }, [isOpened]);
 
   const subRef = useCallback((node: HTMLUListElement) => {
-    setWrapperHeight(node.getBoundingClientRect().height);
+    if (node) {
+      setWrapperHeight(node.getBoundingClientRect().height);
+    }
   }, []);
 
   const cls = classNames({
